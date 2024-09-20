@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive India Map</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="hpcss.css">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="hpjs.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Our Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                        <a class="dropdown-item" href="#">Service 1</a>
+                        <a class="dropdown-item" href="#">Service 2</a>
+                        <a class="dropdown-item" href="#">Service 3</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Our Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div id="heroCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#heroCarousel" data-slide-to="1"></li>
+            <li data-target="#heroCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('pic1.jpg');">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Welcome to Our Site</h1>
+                    <p>Discover amazing places and explore the rich culture of India.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('pic2.jpg');">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Explore Diverse Cultures</h1>
+                    <p>From traditions to modern attractions, find it all here.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('pic3.jpg');">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Your Journey Starts Here</h1>
+                    <p>Plan your next adventure with us.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- Map Section -->
+    <section id="map-section" class="py-5">
+        <div class="container text-center">
+            <h2>Explore India's Cultural Heritage</h2>
+            <div id="visualization"></div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="our-services" class="py-5">
+        <div class="container text-center">
+            <h2>Our Services</h2>
+            <p>We offer a range of services to cater to various needs. Our expertise spans across different domains, ensuring top-notch solutions and exceptional results for our clients.</p>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="service-box text-center">
+                        <i class="icon-service mb-3"></i>
+                        <h3>Service 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac nisi eget lorem.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-box text-center">
+                        <i class="icon-service mb-3"></i>
+                        <h3>Service 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac nisi eget lorem.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-box text-center">
+                        <i class="icon-service mb-3"></i>
+                        <h3>Service 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac nisi eget lorem.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-box text-center">
+                        <i class="icon-service mb-3"></i>
+                        <h3>Service 4</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac nisi eget lorem.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-box text-center">
+                        <i class="icon-service mb-3"></i>
+                        <h3>Service 5</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac nisi eget lorem.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-box text-center">
+                        <i class="icon-service mb-3"></i>
+                        <h3>Service 6</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac nisi eget lorem.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Projects Section -->
+    <section id="our-projects" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>Our Projects</h2>
+            <ul class="nav nav-tabs" id="projectTabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="app-tab" data-toggle="tab" href="#app" role="tab" aria-controls="app" aria-selected="false">App</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="branding-tab" data-toggle="tab" href="#branding" role="tab" aria-controls="branding" aria-selected="false">Product Branding</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="books-tab" data-toggle="tab" href="#books" role="tab" aria-controls="books" aria-selected="false">Books</a>
+                </li>
+            </ul>
+            <div class="tab-content mt-3" id="projectTabsContent">
+                <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="project-box">
+                                <img src="pic10.jpg" alt="Project 1" class="img-fluid">
+                                <div class="overlay">
+                                    <h3>Project 1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="project-box">
+                                <img src="pic9.jpg" alt="Project 2" class="img-fluid">
+                                <div class="overlay">
+                                    <h3>Project 2</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="project-box">
+                                <img src="pic8.jpg" alt="Project 3" class="img-fluid">
+                                <div class="overlay">
+                                    <h3>Project 3</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="project-box">
+                                <img src="pic7.jpg" alt="Project 4" class="img-fluid">
+                                <div class="overlay">
+                                    <h3>Project 4</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="project-box">
+                                <img src="pic6.jpg" alt="Project 5" class="img-fluid">
+                                <div class="overlay">
+                                    <h3>Project 5</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="project-box">
+                                <img src="pic5.jpg" alt="Project 6" class="img-fluid">
+                                <div class="overlay">
+                                    <h3>Project 6</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat similar structure for other tabs: #app, #branding, #books -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>

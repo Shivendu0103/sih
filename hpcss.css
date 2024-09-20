@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.carousel-item {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF5D9;
+}
+
+.carousel-indicators li {
+    background-color: #FFF5D9;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #7B949C;
+}
+
+/* Hero Section */
+.carousel-item h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.carousel-item p {
+    font-size: 1.25rem;
+}
+
+/* Map Section */
+#map-section {
+    background-color: #7B949C;
+    color: #FFF5D9;
+    width: 100%;
+    height: 10%;
+}
+
+.visualization{
+    width: 100rem;
+}
+
+/* Our Services Section */
+#our-services {
+    background-color: #213C4E;
+    color: #FFF5D9;
+}
+
+.service-box {
+    background-color: #182241;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icon-service {
+    font-size: 3rem;
+    color: #7B949C;
+}
+
+/* Our Projects Section */
+#our-projects {
+    background-color: #F4F4F4;
+}
+
+.project-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.project-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFF5D9;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.project-box:hover .overlay {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #213C4E;
+    color: #FFF5D9;
+}
